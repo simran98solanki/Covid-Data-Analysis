@@ -103,7 +103,7 @@ On D.location = V.location
 and D.date = V.date
 Where D.continent is not null
 --order by 2,3
-) Select *, ROUND((RollingPeopleVaccinated/population)*100,2) as PercentageofRollingPeopleVaccinated
+) Select *, ROUND((RollingPeopleVaccinated/population)*100,2) as VaccinationRate
 From PopulationVSVaccinations
 
 
@@ -133,7 +133,7 @@ Where D.continent is not null
 --order by 2,3
 
 -- Select data from the temp table and calculate the percentage of population vaccinated
-Select *, ROUND((RollingPeopleVaccinated/population)*100,2) as PercentageofRollingPeopleVaccinated
+Select *, ROUND((RollingPeopleVaccinated/population)*100,2) as VaccinationRate
 From #PercentPopulationVaccinated 
 
 
